@@ -48,28 +48,31 @@ jQuery("#checkbox").change(function () {
     // console.log(x);
     let data = {
         "night":"night",
-        "night-details":"night-details",
+        "night_details":"night-details",
+        "checked":"checked"
     };
-
-
-    if (this.checked){
-    localStorage.setItem("theme_mode",JSON.stringify(data));
-    let return_data = localStorage.getItem("theme_mode");
-    let class1 = JSON.stringify(return_data).night;
-    console.log(JSON.stringify(return_data).night);
-    let class2 =  JSON.stringify(return_data).night-details;
-    jQuery('body').addClass(class1);
-    jQuery('section').addClass(class2);
-    }else{
-    localStorage.clear("theme_mode");
-    jQuery('body').removeClass('night');
-    jQuery('section').removeClass('night-details');
-
-    }
-
     
-
-
-
+    localStorage.setItem("theme_mode",JSON.stringify(data));
+    let return_data = JSON.parse(localStorage.getItem("theme_mode"));
+    if (this.checked){
+    jQuery('body').addClass(return_data.night);
+    jQuery('section').addClass(return_data.night_details);
+    jQuery(this).attr("checked","checked");
+    }else{
+    
+    jQuery('body').removeClass(data.night);
+    jQuery('section').removeClass(data.night_details);
+    localStorage.clear("theme_mode");
+    }
 });
+
+
+if(localStorage.getItem("theme_mode")){
+let return_data = JSON.parse(localStorage.getItem("theme_mode"));
+jQuery('body').addClass(return_data.night);
+jQuery('section').addClass(return_data.night_details);
+}else{
+
+}
+
 });
