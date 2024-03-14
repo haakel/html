@@ -31,48 +31,49 @@ jQuery(document).ready(
 
 
 
-jQuery("#checkbox").change(function () { 
-    // if(this.checked){
-    //     jQuery('body').addClass('night');
-    // }else{
-    //     jQuery('body').removeClass('night');
+// jQuery("#checkbox").change(function () { 
+//     // if(this.checked){
+//     //     jQuery('body').addClass('night');
+//     // }else{
+//     //     jQuery('body').removeClass('night');
 
-    // }
-    // jQuery("body").toggleClass("night");
-    // jQuery("section").toggleClass("night-details");
+//     // }
+//     // jQuery("body").toggleClass("night");
+//     // jQuery("section").toggleClass("night-details");
 
-    // localStorage.setItem("test","testlocalstorege");
-    // localStorage.clear("test");
-    // let x= localStorage.getItem("test");
-    // alert(x);
-    // console.log(x);
-    let data = {
-        "night":"night",
-        "night_details":"night-details",
-        "checked":"checked"
-    };
+//     // localStorage.setItem("test","testlocalstorege");
+//     // localStorage.clear("test");
+//     // let x= localStorage.getItem("test");
+//     // alert(x);
+//     // console.log(x);
+//     let data = {
+//         "night":"night",
+//         "night_details":"night-details",
+//         "checked":"checked"
+//     };
     
-    localStorage.setItem("theme_mode",JSON.stringify(data));
-    let return_data = JSON.parse(localStorage.getItem("theme_mode"));
-    if (this.checked){
-    jQuery('body').addClass(return_data.night);
-    jQuery('section').addClass(return_data.night_details);
-    jQuery(this).attr("checked","checked");
-    }else{
-    
-    jQuery('body').removeClass(data.night);
-    jQuery('section').removeClass(data.night_details);
-    localStorage.clear("theme_mode");
-    }
-});
+//     localStorage.setItem("theme_mode",JSON.stringify(data));
+//     let return_data = JSON.parse(localStorage.getItem("theme_mode"));
+//     if (this.checked){
+//     jQuery('body').addClass(return_data.night);
+//     jQuery('section').addClass(return_data.night_details);
+//     jQuery(this).attr("checked",return_data.checked);
+//     }else{
+//     jQuery(this).removeAttr("checked");
+//     jQuery('body').removeClass(data.night);
+//     jQuery('section').removeClass(data.night_details);
+//     localStorage.clear("theme_mode");
+//     }
+// });
 
 
-if(localStorage.getItem("theme_mode")){
-let return_data = JSON.parse(localStorage.getItem("theme_mode"));
-jQuery('body').addClass(return_data.night);
-jQuery('section').addClass(return_data.night_details);
-}else{
+// if(localStorage.getItem("theme_mode")){
+// let return_data = JSON.parse(localStorage.getItem("theme_mode"));
+// jQuery('#checkbox').attr("checked",return_data.checked);
+// jQuery('body').addClass(return_data.night);
+// jQuery('section').addClass(return_data.night_details);
+// }
 
-}
+// }
 
-});
+    });
