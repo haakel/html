@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "yekan-bakh";
+    src: url(../fonts/Yekan-Bakh-FaNum-04-Regular.woff) format("woof"),url("../fonts/Yekan-Bakh-FaNum-05-Medium.woff")format("woff");
+} 
+*,body{
+    font-family: "yekan-bakh";
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #d8d7d7;
+}
+h1{
+    text-align: center;
+    margin: 100px;
+}
+ul li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+.scrolltop{
+    position: fixed;
+    bottom: -60px;
+    /* bottom: 0; */
+    right: 20px;
+    font-size: 30px;
+    color: #f7f7f7;
+    transition: all 0.3s ease-in-out;
+}
+.scrolltop:hover{
+    color:rgb(147, 151, 150);
+}
+.show{
+    bottom: 0;
+}

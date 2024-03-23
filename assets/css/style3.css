@@ -1,0 +1,83 @@
+@font-face {
+    font-family: "yekan-bakh";
+    src: url(../fonts/Yekan-Bakh-FaNum-04-Regular.woff) format("woof"),url("../fonts/Yekan-Bakh-FaNum-05-Medium.woff")format("woff");
+} 
+*,body{
+    font-family: "yekan-bakh";
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #d8d7d7;
+}
+h1{
+    text-align: center;
+    margin: 100px;
+}
+ul li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+p.caption{
+    position: absolute;
+    bottom: 9px;
+    background: #efefef;
+    font-size: 27px;
+    padding: 10px;
+    width: 100%;
+    background: rgba(255, 255, 255, .5);
+}
+#slider{
+    position: relative;
+    /* overflow: hidden; */
+    margin: 50px auto;
+    border-radius: 4px;
+}
+#slider ul{
+position: relative; 
+height: 800px;
+
+}
+#slider ul li{
+    /* position: relative; */
+    /* position: absolute;
+    display: block;
+    float:right;
+    width: 800px; */
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+#slider ul li.active {
+    opacity: 1;
+}
+a.control_prev , a.control_next{
+    position: absolute;
+    top: 46%;
+    z-index: 999;
+    display: block;
+    padding: 10px;
+    width: auto;
+    height: auto;
+    color: #fff;
+    font-weight: 600;
+    font-size: 30px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+a.control_prev:hover , a.control_next:hover{
+    opacity: 1;
+    transition: all 0.2s ease;
+}
+a.control_prev{
+    left: 0;
+}
+
+
+ 
