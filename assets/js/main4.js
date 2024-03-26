@@ -59,11 +59,11 @@ j(document).ready(function () {
 
         j("#slider ul").animate({
             // left: +slidewidth
-            opacity:0
+            opacity:1
         },1000,function(){
-        j('#slider ul li:first-child').appendTo('#slider ul');
+        j('#slider ul li:first-child').prependTo('#slider ul');
         // j('#slider ul').css('left','');
-        j('#slider ul').css('opacity','1');
+        j('#slider ul li:first-child').css('opacity','0');
         });
         // j('#slider ul li:last-child').css("border-color","#28ff2c");
 
