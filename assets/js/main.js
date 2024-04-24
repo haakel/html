@@ -5,8 +5,8 @@ jQuery(document).ready(
     // // let y = 2;  بهینه شده var قابل تغییر هم هست
     // // const z ="helo!!!";  مثل let فقط نمیشه تغییرش داد 
     // let y = 2; 
-    // // jQuery("#username").hide(); انتخاب id 
-    // // jQuery("input").hide(); انتخاب یک تگ
+    // jQuery("#username").hide(); انتخاب id 
+    // jQuery("input").hide(); انتخاب یک تگ
 
     // let username = jQuery("#username");
     // let x = jQuery("input.x")
